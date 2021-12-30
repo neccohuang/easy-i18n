@@ -11,8 +11,8 @@ import (
 	"os"
 
 	"github.com/Xuanwo/go-locale"
-	_ "github.com/mylukin/easy-i18n/easyi18n/catalog"
-	"github.com/mylukin/easy-i18n/i18n"
+	_ "github.com/neccohuang/easy-i18n/easyi18n/catalog"
+	"github.com/neccohuang/easy-i18n/i18n"
 	"github.com/urfave/cli/v2"
 )
 

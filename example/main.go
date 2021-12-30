@@ -10,8 +10,8 @@ import (
 	"golang.org/x/text/language"
 	"os"
 
-	_ "github.com/mylukin/easy-i18n/example/catalog"
-	"github.com/mylukin/easy-i18n/i18n"
+	_ "github.com/neccohuang/easy-i18n/example/catalog"
+	"github.com/neccohuang/easy-i18n/i18n"
 )
 
 func main() {

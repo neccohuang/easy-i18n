@@ -17,8 +17,8 @@ import (
 	"fmt"
 	"os"
 
-	_ "github.com/mylukin/easy-i18n/example/catalog"
-	"github.com/mylukin/easy-i18n/i18n"
+	_ "github.com/neccohuang/easy-i18n/example/catalog"
+	"github.com/neccohuang/easy-i18n/i18n"
 	"golang.org/x/text/language"
 )
 
@@ -57,7 +57,7 @@ func main() {
 The easyi18n command manages message files used by the i18n package.
 
 ```
-go get -u github.com/mylukin/easy-i18n/easyi18n
+go get -u github.com/neccohuang/easy-i18n/easyi18n
 easyi18n -h
 
   update, u    merge translations and generate catalog
@@ -101,7 +101,7 @@ Use `easyi18n extract . ./locales/en.json` to extract all i18n.Sprintf function 
 	```
 3. After `zh-Hans.json` has been translated, run `easyi18n generate --pkg=catalog ./locales ./catalog/catalog.go`.
 
-4. Import `catalog` package in main.go, example: `import _ "github.com/mylukin/easy-i18n/example/catalog"` 
+4. Import `catalog` package in main.go, example: `import _ "github.com/neccohuang/easy-i18n/example/catalog"` 
 
 ### Translating new messages
 
@@ -114,7 +114,7 @@ If you have added new messages to your program:
 
 ## For examples:
 
-- Look at an example [application](https://github.com/mylukin/easy-i18n/tree/master/example).
+- Look at an example [application](https://github.com/neccohuang/easy-i18n/tree/master/example).
 
 ## Thanks:
 

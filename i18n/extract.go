@@ -27,7 +27,7 @@ func Extract(packName string, paths []string, outFile string) error {
 				return nil
 			}
 			// ignore easy-i18n
-			if strings.Index(path, "github.com/mylukin/easy-i18n") > -1 {
+			if strings.Index(path, "github.com/neccohuang/easy-i18n") > -1 {
 				return nil
 			}
 			if filepath.Ext(path) != ".go" {
@@ -156,7 +156,7 @@ func Extract(packName string, paths []string, outFile string) error {
 
 func i18nPackageName(file *ast.File) string {
 	for _, i := range file.Imports {
-		if i.Path.Kind == token.STRING && i.Path.Value == `"github.com/mylukin/easy-i18n/i18n"` {
+		if i.Path.Kind == token.STRING && i.Path.Value == `"github.com/neccohuang/easy-i18n/i18n"` {
 			if i.Name == nil {
 				return "i18n"
 			}

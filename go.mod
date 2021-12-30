@@ -1,4 +1,4 @@
-module github.com/mylukin/easy-i18n
+module github.com/neccohuang/easy-i18n
 
 go 1.14
 
