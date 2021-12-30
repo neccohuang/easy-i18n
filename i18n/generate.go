@@ -38,13 +38,14 @@ func Generate(pkgName string, paths []string, outFile string) error {
 				return nil
 			}
 
-			messages, err := unmarshal(path)
-			if err != nil {
-				return err
-			}
 			
 			fmt.Println("======",info.Name(),filepath.Ext(info.Name()),path,filepath.Ext(path),filepath.Ext(path) != ".json")
 			if (filepath.Ext(path) == ".json") {
+				messages, err := unmarshal(path)
+				if err != nil {
+					return err
+				}
+			
 				lang := info.Name()[0 : len(info.Name())-5]
 				data[lang] = messages
 				fmt.Printf("Generate %+v ...\n", path)
