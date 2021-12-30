@@ -29,10 +29,7 @@ func Generate(pkgName string, paths []string, outFile string) error {
 	data := map[string]*Message{}
 	for _, path := range paths {
 		
-		fmt.Println("======",path,filepath.Ext(path),filepath.Ext(path) != ".json")
-		if (filepath.Ext(path) != ".json") {
-			continue
-		}
+		
 		if err := filepath.Walk(path, func(path string, info os.FileInfo, err error) error {
 			if err != nil {
 				return err
@@ -44,6 +41,11 @@ func Generate(pkgName string, paths []string, outFile string) error {
 			messages, err := unmarshal(path)
 			if err != nil {
 				return err
+			}
+			
+			fmt.Println("======",info.Name(),filepath.Ext(info.Name()),path,filepath.Ext(path),filepath.Ext(path) != ".json")
+			if (filepath.Ext(path) != ".json") {
+				continue
 			}
 
 			
