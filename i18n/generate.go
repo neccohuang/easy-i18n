@@ -45,7 +45,7 @@ func Generate(pkgName string, paths []string, outFile string) error {
 			
 			fmt.Println("======",info.Name(),filepath.Ext(info.Name()),path,filepath.Ext(path),filepath.Ext(path) != ".json")
 			if (filepath.Ext(path) != ".json") {
-				continue
+				return nil
 			}
 
 			
