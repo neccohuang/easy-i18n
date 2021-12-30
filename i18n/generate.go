@@ -28,6 +28,9 @@ func Generate(pkgName string, paths []string, outFile string) error {
 
 	data := map[string]*Message{}
 	for _, path := range paths {
+		if (filepath.Ext(path) != ".json") {
+			continue
+		}
 		if err := filepath.Walk(path, func(path string, info os.FileInfo, err error) error {
 			if err != nil {
 				return err
@@ -41,11 +44,11 @@ func Generate(pkgName string, paths []string, outFile string) error {
 				return err
 			}
 
-			if (filepath.Ext(info.Name()) == ".json") {
+			
 				lang := info.Name()[0 : len(info.Name())-5]
 				data[lang] = messages
 				fmt.Printf("Generate %+v ...\n", path)
-			}
+			
 
 			return nil
 		}); err != nil {
