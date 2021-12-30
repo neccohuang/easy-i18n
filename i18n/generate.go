@@ -41,6 +41,7 @@ func Generate(pkgName string, paths []string, outFile string) error {
 				return err
 			}
 
+			fmt.Printf("=========== %+v ...\n", info)
 			lang := info.Name()[0 : len(info.Name())-5]
 			data[lang] = messages
 			fmt.Printf("Generate %+v ...\n", path)
